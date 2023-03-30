@@ -1,0 +1,335 @@
+---
+title: "The Analysis of Cycling Infrastructure in London, UK"
+author: "Zeqiang Fang"
+date: "2021/03/19"
+output: html_document
+---
+
+Import the environment
+```{r,message = FALSE,warning = FALSE,results='hide'}
+library(tidyverse)
+library(data.table)
+library(sp)
+library(sf)
+library(table1)
+library(tm)
+library(spatstat)
+library(here)
+library(sp)
+library(rgeos)
+library(maptools)
+library(tmap)
+library(sf)
+library(geojson)
+library(geojsonio)
+library(tmaptools)
+library(RColorBrewer)
+library(spdep) 
+```
+
+Import the London Boroughs
+```{r}
+# First, I get the London Boroughs' Boundaries
+# Maybe it can be altered by Wards to do other fields of analysis
+LondonBoroughs <- st_read(here::here("Dataset", "statistical-gis-boundaries-london", "ESRI", "London_Borough_Excluding_MHW.shp"))
+
+library(stringr)
+BoroughMap <- LondonBoroughs %>%
+  dplyr::filter(str_detect(GSS_CODE, "^E09"))%>%
+  st_transform(., 27700)
+
+# Check if it can be run in the interactive map
+tmap_mode("view")
+qtm(BoroughMap)
+```
+
+## 1 Data Exploration
+
+Utilise the CycleInfraLnd R package to access the dataset
+```{r}
+# CycleInfraLnd package is a very convenient package to get dataset from https://cycling.data.tfl.gov.uk/ Cycling infrastructure section
+
+# The guidence to use CycleInfraLnd can be find in this link: https://github.com/PublicHealthDataGeek/CycleInfraLnd
+library(CycleInfraLnd)
+signal_point = get_cid_points(type = "signal") %>%
+    st_transform(.,27700)
+head(signal_point)
+```
+Cycling signal data is filtered by survey date (2017/2018)
+SVDATE means the survey date for data record
+```{r}
+signal_point_17 = signal_point %>%
+                filter(SVDATE < '2018-01-01')
+signal_point_18 = signal_point %>%
+                filter(SVDATE < "2019-01-01")
+signal_point_18_plus = signal_point %>%
+                filter(SVDATE > "2017-12-31")
+summary(signal_point_17)
+summary(signal_point_18)
+
+# plot the data point for different recorded date
+tm_shape(BoroughMap) +
+  tm_polygons(col = NA, alpha = 0.5) +
+tm_shape(signal_point_17) +
+  tm_dots(col = "blue") +
+tm_shape(signal_point_18_plus) +
+  tm_dots(col = "red")
+```
+We found the signal data for bikes is a small number for each borough. Cycling signals are frequently seen along the street in City of London, Westminster and 
+Tower Hamlets where there are many tourist attractions.
+
+Overview of Parking Point
+```{r}
+library(CycleInfraLnd)
+parking_point = get_cid_points(type = "cycle_parking")%>%
+    st_transform(.,27700)
+
+# data inspects
+parking_point %>% head()
+nrow(parking_point)
+ncol(parking_point)
+
+# data slice by different survey date
+parking_point_17 = parking_point %>%
+                filter(SVDATE < '2018-01-01')
+parking_point_18 = parking_point %>%
+                filter(SVDATE < "2019-01-01")
+parking_point_18_plus = parking_point %>%
+                filter(SVDATE > "2017-12-31")
+head(parking_point_17,5)
+head(parking_point_18_plus,5)
+
+# plot the map
+tm_shape(BoroughMap) +
+  tm_polygons(col = NA, alpha = 0.5) +
+tm_shape(parking_point_17) +
+  tm_dots(col = "blue") +
+tm_shape(parking_point_18_plus) +
+  tm_dots(col = "red")
+```
+
+
+```{r}
+# Data cleaning
+library(tidyverse)
+library(sf)
+parking_point = distinct(parking_point)
+
+#Adjust
+parking_point_sub = parking_point[BoroughMap,]
+#check to see that they've been removed
+tmap_mode("view")
+tm_shape(BoroughMap) +
+  tm_polygons(col = NA, alpha = 0.5) +
+tm_shape(parking_point_sub) +
+  tm_dots(col = "blue")
+
+```
+
+# 2 The Density Analysis of Cycling Lane/Track
+
+## 2.1 Line Data Exploration
+
+```{r}
+# The density of the number of cycling lanes
+library(CycleInfraLnd)
+cycle_lane = get_cid_lines("cycle_lane_track")
+# make the lane dataset smaller
+names(cycle_lane)
+cycle_lane_slim = dplyr::select(cycle_lane,FEATURE_ID,BOROUGH,geometry)
+
+# export the cycling lane map
+tmap_mode("plot")
+tm_shape(BoroughMap) +
+  tm_polygons(col = NA, alpha = 0.5) +
+tm_shape(cycle_lane_slim) +
+  tm_lines(col = "blue")
+
+```
+
+## 2.2 Data preprocessing and merge
+```{r}
+# It is important to transform boroughs into GSS_Code to plot the map
+# Firstly, we can inspect the boroughs value in nldf1 & MapBoroughs
+# head(cycle_lane_slim$BOROUGH)
+# head(BoroughMap$NAME)
+
+# Also we need to transform "&" into "and" in nldf1 dataset
+# BOROUGH == "Kensington & Chelsea"
+# BOROUGH == "Barking & Dagenham"
+# BOROUGH == "Hammersmith & Fulham"
+# Utilise recode to apply find&replace operation
+
+# "cldf" means "cycle line dataframe"
+# utilise the recode methods
+cldf = cycle_lane_slim %>% 
+  mutate(BOROUGH = recode(BOROUGH, "Kensington & Chelsea"="Kensington and Chelsea")) %>%
+  mutate(BOROUGH = recode(BOROUGH,"Barking & Dagenham"="Barking and Dagenham")) %>%
+  mutate(BOROUGH = recode(BOROUGH,"Hammersmith & Fulha"="Hammersmith and Fulha"))
+
+# cldf1  = cldf %>% select(., FEATURE_ID,SVDATE,CLT_COLOUR,BOROUGH)
+# we need to drop the geometry attribute in the beginning
+# replace the column name "BOROUGH" into "NAME"
+cldf1 = cycle_lane_slim %>% st_drop_geometry()
+cldf1 = rename(cldf1, NAME = BOROUGH)
+
+# Merge the dataframe
+cldf_merged = merge(LondonBoroughs, cldf1 ,by="NAME",all = TRUE)
+```
+
+## 2.3 The statistics analysis of the cycling lane for boroughs
+```{r}
+# inspect the names of cycle_lane
+names(cldf_merged)
+
+# the number of lane dataframe
+nldf = cldf_merged %>%
+  add_count(GSS_CODE) %>%
+  mutate(area = st_area(.)) %>%
+  mutate(density = n*1000*1000 / area)
+
+
+nldf1 = dplyr::select(nldf,density,NAME,GSS_CODE, n)
+
+nldf1 = nldf1%>%                    
+  group_by(GSS_CODE)%>%         
+  summarise(density =first(density),GSS_CODE=first(GSS_CODE),NAME = first(NAME), n = first(n))
+```
+Plot the density analysis result
+```{r}
+# plot the figure: The distribution of the density of the cycle lane/track
+
+tmap_mode("view")
+tm_shape(nldf1) +
+  tm_polygons("density",
+              style="jenks",
+              alpha = 1,
+              palette="PuOr",
+              midpoint=NA,
+              popup.vars=c("NAME","density"),
+              title="Density per square kilometre"
+              ) +
+    tm_text("NAME", just = "top")+
+  tm_shape(cycle_lane_slim) +
+    tm_lines(col = "navy", alpha = 0.2)
+
+# dcl_map = tm_shape(nldf1) +
+#   tm_polygons("density",
+#               style="jenks",
+#               alpha = 1,
+#               palette="PuOr",
+#               midpoint=NA,
+#               popup.vars=c("NAME","density"),
+#               title="Density per square kilometre"
+#               ) +
+#     tm_text("NAME", just = "top")+
+#   tm_shape(cycle_lane_slim) +
+#     tm_lines(col = "navy", alpha = 0.2)
+# tmap_save(dcl_map, "density_cycle_lane.html")
+
+```
+
+## 2.4 Descriptive Statistics
+
+Introduce the ECharts4R, we plot the scatter chart in the beginning.
+```{r}
+library(echarts4r)
+nldf1$n = as.numeric(nldf1$n)
+nldf1$density = as.numeric(nldf1$density)
+
+nldf2 = nldf1 %>%
+  mutate(density = density * 1000)
+
+nldf_scatter = nldf1 %>% 
+  e_charts(n) %>% 
+  e_scatter(n,density,NAME,name = "The Number of Cycling Lane") %>% 
+  e_visual_map(n, scale = e_scale) %>% # scale color
+  e_brush()%>%
+  e_tooltip()%>%
+  e_datazoom(x_index = 0, type = "slider") %>% 
+  e_datazoom(y_index = 0, type = "slider")
+
+htmlwidgets::saveWidget(nldf_scatter, file = "scatter.html")
+```
+the bar charts
+```{r}
+nldf_bar = nldf1 %>% 
+  e_charts(NAME) %>% 
+  e_bar(n, name = "Number",size = 5) %>% 
+  e_bar(density, name = "Density",size = 5) %>% 
+  e_title("Cycling Lane/Track") %>%
+  e_tooltip()%>%
+  e_flip_coords()
+htmlwidgets::saveWidget(nldf_bar, file = "echarts4r.html")
+```
+
+
+# 3 The Exploration of Road Data
+
+## 3.1 motorway junction
+```{r}
+london_motorway_junction = st_read(here("Dataset","Open Roads","openroads","London_MotorwayJunction.shp"))
+plot(st_geometry(london_motorway_junction))
+```
+
+## 3.2 write the whole road link in London
+```{r}
+
+london_roadlink = st_read(here("Dataset","Open Roads","openroads","London_RoadLink.shp"))
+plot(st_geometry(london_roadlink))
+```
+
+## 3.3 the road node in London
+```{r}
+london_roadnode = st_read(here("Dataset","Open Roads","openroads","London_RoadNode.shp"))
+plot(st_geometry(london_roadnode))
+
+# how to save map?
+# visit the https://rdrr.io/cran/tmap/man/tmap_save.html
+RN_Map = tmap_mode("view")
+tm_shape(london_roadnode)+
+  tm_dots(
+    col = "blue",
+    size = 0.002
+    )
+tmap_save(RN_Map, "London_RoadNode.html")
+```
+
+# Other Improvement
+
+Introduce the new index: 
+park2node = number_of_park_point / number_of_road_node
+This index can reflect the completeness of in the street-relevant infrastructure
+
+Firstly, we can count the park point for every LSOA
+
+```{r}
+
+library(CycleInfraLnd)
+parking_point = get_cid_points(type = "cycle_parking")%>%
+    st_transform(.,27700)
+
+# the number of parking point
+# npdf = ...
+```
+
+The analysis capacity of the street
+I plan to use this [dataset](https://github.com/npalomin/streetspace_dataset_ldn)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+

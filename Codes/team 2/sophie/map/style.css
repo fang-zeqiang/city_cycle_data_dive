@@ -1,0 +1,271 @@
+body { 
+    margin: 0; padding: 0; 
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+    
+#console {
+        position: absolute;
+        background-color: #fff;
+        box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+        border-radius: 24px;
+        padding: 15px;
+        width: 230px;
+        margin-top: 15px;
+        margin-left: 15px;
+}
+
+#console h2 {
+        line-height: 1.1em;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.02em;
+
+}
+
+#console p.credit {
+       margin: -8px 0 0 0;
+       padding: 0;
+}
+    
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 0.03em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+}
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.extra_content {
+    padding: 0 10px;
+    font-size: 12px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+#map { position: absolute; top: 0; bottom: 0; width: 100%; };
+
+.session {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.row {
+    height: 14px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.filter {
+  width: 100%;
+  font-size: 16px;
+}
+
+.colors {
+    background: linear-gradient(90deg, rgba(255,242,122,1) 0%, rgba(255,219,76,1) 3%, rgba(255,186,70,1) 7%, rgba(255,157,77,1) 11%, rgba(250,124,82,1) 14%, rgba(233,98,93,1) 18%, rgba(210,70,98,1) 24%, rgba(182,53,104,1) 28%, rgba(148,41,109,1) 55%, rgba(112,35,109,1) 84%);
+    margin-bottom: 5px;
+}
+
+.colors_change{
+  background: linear-gradient(90deg, rgba(63,251,227,1) 0%, rgba(81,155,217,1) 22%, rgba(103,25,188,1) 51%, rgba(165,48,196,1) 75%, rgba(252,70,77,1) 100%);
+  margin-bottom: 5px;
+}
+
+.label {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+}
+
+.label_c {
+  width: 19%;
+  display: inline-block;
+  text-align: center;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #3047C0;
+  cursor: pointer;
+}
+
+.btn {
+    border: 1px solid #310e63; 
+    border-color: #310e63;
+    background-color: white;
+    color: #36104c;
+    padding: 2px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 0.8em;
+}
+
+.btn:hover {
+    background-color: #e6e6e6;
+}
+
+
+ /* Slideshow container */
+.slideshow-container {
+  position: absolute;
+  background: rgba(0,0,0,0.3);
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border-radius: 24px;
+  margin: 15px 0 32px 15px;
+  color: white;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 24px 35px 0 35px;
+  text-align: center;
+  line-height: 1em;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -15px;
+  padding: 0px 3px 0 3px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(232, 177, 90, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* toggle layers */
+#menu {
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 110px;
+    right: 10px;
+    border-radius: 3px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+#menu a {
+    font-size: 13px;
+    color: #404040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
+}
+
+#menu a:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+}
+
+#menu a.active {
+    background-color: #3887be;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#menu a.active:hover {
+    background: #3074a4;
+}
+
+.year_button {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.year_button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

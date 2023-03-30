@@ -1,0 +1,320 @@
+formatted_address,latitude,longitude,frequency,duration
+"London W9 2LH, UK",51.5258612,-0.1897775,three-times-a-week-or-more,multiple-days
+"3 Shelley Place, Islington, London N1 1WF, UK",51.5391667,-0.104361,three-times-a-week-or-more,overnight
+"Newlands Rd, London SW16 4SU, UK",51.4066956,-0.1273307,three-times-a-week-or-more,overnight
+"Mirabel Rd, Fulham, London SW6 7EH, UK",51.481411,-0.2042724,three-times-a-week-or-more,multiple-days
+"Bowes Rd, Arnos Grove, London N11 1AG, UK",51.6160275,-0.1368663,just-once,overnight
+"Bloxhall Rd, Leyton, London E10 7LW, UK",51.567507,-0.0302161,three-times-a-week-or-more,multiple-days
+"Cosway St, Marylebone, London NW1 5NR, UK",51.5213797,-0.1657348,three-times-a-week-or-more,a-whole-day
+"Golders Green Underground Station, N End Rd, Golders Green, London NW11 7RN, UK",51.5722247,-0.1944159,three-times-a-week-or-more,a-whole-day
+"London NW11 6XX, UK",51.5856744,-0.1994092,just-once,a-whole-day
+"Putney, London SW15 1SY, UK",51.4649745,-0.2157286,three-times-a-week-or-more,overnight
+"Cliff Rd, London NW1 9AN, UK",51.5477161,-0.1287114,three-times-a-week-or-more,overnight
+"Cliff Rd, London NW1 9AN, UK",51.5477161,-0.1287114,three-times-a-week-or-more,overnight
+"Oxford Circus Underground Station, Oxford St, West End, London W1B 3AG, UK",51.5152117,-0.1418553,three-times-a-week-or-more,about-4-hours
+"Shortlands Rd, Leyton, London E10 7AH, UK",51.5723597,-0.0152461,just-once,about-4-hours
+"Temple Rd, Cricklewood, London NW2 6PJ, UK",51.5597418,-0.2208882,three-times-a-week-or-more,about-4-hours
+"Belmont Rd, Wallington SM6 8TB, UK",51.3620804,-0.1477845,three-times-a-week-or-more,a-whole-day
+"Pentonville Rd, Islington, London N1 9PR, UK",51.5318773,-0.1103455,three-times-a-week-or-more,multiple-days
+"London Borough of Ealing, UK",51.5250366,-0.3413965,once-twice-a-week,a-whole-day
+"Kings Cross, London, UK",51.5347488,-0.1245845,three-times-a-week-or-more,overnight
+"Bell Ln, Spitalfields, London E1 7NP, UK",51.517572,-0.0751592,three-times-a-week-or-more,multiple-days
+"Craven Hill Gardens, Bayswater, London W2 3EA, UK",51.5131418,-0.1822398,three-times-a-week-or-more,overnight
+"London E3 3NP, UK",51.5253562,-0.0152205,three-times-a-week-or-more,multiple-days
+"Chicheley St, South Bank, London SE1 7PJ, UK",51.5025548,-0.1167273,three-times-a-week-or-more,a-whole-day
+"Rockmount Rd, London SE19 3ST, UK",51.4195231,-0.0896768,three-times-a-week-or-more,multiple-days
+"Highbury, London, UK",51.5569649,-0.0979656,just-once,less-than-30-minutes
+"Jennings Rd, East Dulwich, London SE22 9JU, UK",51.452429,-0.0748529,three-times-a-week-or-more,multiple-days
+"Fairholme Rd, West Kensington, London W14 9JZ, UK",51.4881366,-0.2078155,three-times-a-week-or-more,multiple-days
+"London SW19 6EX, UK",51.4434712,-0.2181335,three-times-a-week-or-more,multiple-days
+"Elm Grove Parade, Wallington SM6 7JE, UK",51.3709993,-0.1579839,just-once,overnight
+"Devonshire Rd, Chiswick, London W4 2EU, UK",51.4921461,-0.2562417,three-times-a-week-or-more,multiple-days
+"Brondesbury Rd, Queen's Park, London NW6 6RY, UK",51.5353686,-0.203102,three-times-a-week-or-more,multiple-days
+"Windmill Rd, Brentford TW8 9NA, UK",51.4907844,-0.3102926,three-times-a-week-or-more,multiple-days
+"Deptford Bridge DLR station, Deptford, London SE8, UK",51.4741189,-0.0223782,three-times-a-week-or-more,overnight
+"Dumbarton Rd, Brixton, London SW2 5LU, UK",51.4507456,-0.1246899,three-times-a-week-or-more,multiple-days
+"47-49 Huntley St, Bloomsbury, London WC1E 6DG, UK",51.5223629,-0.1338357,just-once,about-an-hour
+"Thorold Rd, Ilford IG1 4EX, UK",51.5615692,0.0746864,three-times-a-week-or-more,multiple-days
+"Barnsbury Rd, The Angel, London N1 0HB, UK",51.534259,-0.1111821,three-times-a-week-or-more,multiple-days
+"Barnsbury Rd, The Angel, London N1 0HB, UK",51.534259,-0.1111821,few-times-per-month,multiple-days
+"Warfield Rd, Kensal Green, London NW10 5LA, UK",51.5291799,-0.2182516,three-times-a-week-or-more,overnight
+"Camberwell New Rd, Vassal, London SE5 0TA, UK",51.4799789,-0.1083058,just-once,a-whole-day
+"Somers Town, London NW1 1HR, UK",51.5298624,-0.1294845,just-once,about-an-hour
+"Great Titchfield St, Fitzrovia, London W1W 7QJ, UK",51.5184761,-0.1404559,just-once,about-4-hours
+"High St, Brentford TW8 0AH, UK",51.4844834,-0.302392,three-times-a-week-or-more,overnight
+"High St, Brentford TW8 0AH, UK",51.4844834,-0.302392,three-times-a-week-or-more,overnight
+"St John St, Farringdon, London EC1V 4JW, UK",51.5227253,-0.102087,three-times-a-week-or-more,overnight
+"Wakeman Rd, Kensal Green, London NW10 5DE, UK",51.5306572,-0.2190001,three-times-a-week-or-more,multiple-days
+"Greenwich, London, UK",51.4933675,0.0098214,just-once,about-4-hours
+"Dupree Rd, Charlton, London SE7 7RR, UK",51.485937,0.0236246,three-times-a-week-or-more,multiple-days
+"Snaresbrook, London E17, UK",51.5856786,0.0084531,few-times-per-month,about-4-hours
+"Kenneth Rd, Chadwell Heath, Dagenham, Romford RM6 6LL, UK",51.5695719,0.1337841,three-times-a-week-or-more,overnight
+"Sugden Rd, London SW11 5EE, UK",51.4625234,-0.1570341,three-times-a-week-or-more,overnight
+"London E2 8GS, UK",51.5286588,-0.0771237,once-twice-a-week,overnight
+"London E2 8GS, UK",51.5286588,-0.0771237,just-once,about-4-hours
+"Clapham Town, London, UK",51.4658813,-0.1413263,three-times-a-week-or-more,multiple-days
+"Marlborough Rd, South Woodford, London E18 1AR, UK",51.5914315,0.0266562,three-times-a-week-or-more,multiple-days
+"Sidcup DA15, UK",51.4466671,0.0995649,once-twice-a-week,a-whole-day
+"Sidcup DA15, UK",51.4466671,0.0995649,just-once,a-whole-day
+"Linden Grove, London SE15 3LF, UK",51.4632698,-0.0594932,three-times-a-week-or-more,overnight
+"Maitland Cl, Greenwich High Rd, Greenwich, London SE10 8UF, UK",51.4769906,-0.0149195,three-times-a-week-or-more,overnight
+"Maitland Cl, Greenwich High Rd, Greenwich, London SE10 8UF, UK",51.4769906,-0.0149195,three-times-a-week-or-more,overnight
+"London E1 4QQ, UK",51.5175473,-0.0391502,three-times-a-week-or-more,multiple-days
+"London E1 0BS, UK",51.5106413,-0.0563835,just-once,overnight
+"Ewhurst Cl, Stepney Green, London E1 3JR, UK",51.5175437,-0.0488739,three-times-a-week-or-more,overnight
+"Tufnell Park Rd, London N7 0PU, UK",51.5571628,-0.1321601,three-times-a-week-or-more,multiple-days
+"Harvist Rd, London NW6 6HB, UK",51.532722,-0.2130291,three-times-a-week-or-more,overnight
+"Horseferry Rd, Westminster, London SW1P 2DY, UK",51.4960432,-0.1344423,three-times-a-week-or-more,a-whole-day
+"Vauxhall, London, UK",51.4861671,-0.12172,three-times-a-week-or-more,a-whole-day
+"Liverpool Street Station, Liverpool St, London EC2M 7PY, UK",51.5187516,-0.0814374,once-twice-a-week,a-whole-day
+"Liverpool Street Station, Liverpool St, London EC2M 7PY, UK",51.5187516,-0.0814374,few-times-per-month,a-whole-day
+"Queen Square, London WC1N 3BG, UK",51.5223367,-0.1220693,three-times-a-week-or-more,multiple-days
+"Shirland Rd, London W9 2BT, UK",51.5270839,-0.1955848,three-times-a-week-or-more,overnight
+"Churchill Rd, Willesden, London NW2 5ED, UK",51.5478852,-0.2325935,three-times-a-week-or-more,a-whole-day
+"Churchill Rd, Willesden, London NW2 5ED, UK",51.5478852,-0.2325935,three-times-a-week-or-more,overnight
+"Penywern Rd, Earl's Court, London SW5 9SX, UK",51.4907042,-0.1946865,three-times-a-week-or-more,multiple-days
+"Canary Wharf, London, UK",51.5054306,-0.0235333,just-once,about-an-hour
+"E14 9yf, 6-7 Harbour Exchange Square, Greater, Cubitt Town, London E14 9HE, UK",51.4980695,-0.0143605,just-once,about-an-hour
+"London SW1X, UK",51.4978255,-0.1541088,once-twice-a-week,overnight
+"Dartmouth Rd, London NW2 4ET, UK",51.5475185,-0.2090874,few-times-per-month,a-whole-day
+"Dartmouth Rd, London NW2 4ET, UK",51.5475185,-0.2090874,three-times-a-week-or-more,multiple-days
+"S Ealing Rd, Ealing, London W5 4QB, UK",51.5016312,-0.3070946,three-times-a-week-or-more,multiple-days
+"Bethnal Green, London E2 0SS, UK",51.5306884,-0.0443079,few-times-per-month,multiple-days
+"151 E Ferry Rd, Isle of Dogs, London E14 3BT, UK",51.4942854,-0.0123948,few-times-per-month,about-an-hour
+"St Leonards Rd, Poplar, London E14 6LN, UK",51.512297,-0.0098056,three-times-a-week-or-more,multiple-days
+"Kingsdale Rd, London SE18 2DF, UK",51.4778538,0.097842,three-times-a-week-or-more,overnight
+"Shirland Rd, London W9 3JJ, UK",51.5292053,-0.20407,three-times-a-week-or-more,overnight
+"Eastcote Station, Field End Rd, Eastcote, Ruislip, Pinner HA5 1QZ, UK",51.5765526,-0.3971429,three-times-a-week-or-more,a-whole-day
+"Hartland Rd, Queen's Park, London NW6 6BG, UK",51.5370947,-0.202654,three-times-a-week-or-more,overnight
+"Straightsmouth, Greenwich, London SE10 9LD, UK",51.4789609,-0.0129064,three-times-a-week-or-more,multiple-days
+"South Bank, London SE1 8UF, UK",51.5045255,-0.1108801,three-times-a-week-or-more,multiple-days
+"Willesden Ln, Kilburn, London NW6 7JP, UK",51.5417035,-0.198082,three-times-a-week-or-more,overnight
+"The Old Bailey, London EC4M 7EH, UK",51.5155093,-0.1020219,few-times-per-month,a-whole-day
+"Euston Rd, London NW1 2BU, UK",51.5249486,-0.1371557,three-times-a-week-or-more,a-whole-day
+"Veronica Rd, London SW17 8QL, UK",51.4372633,-0.1480911,three-times-a-week-or-more,multiple-days
+"Gee's Ct, London, UK",51.5147488,-0.1499893,three-times-a-week-or-more,a-whole-day
+"Watford WD17, UK",51.669535,-0.4116259,three-times-a-week-or-more,overnight
+"Queen's Rd, Watford WD17 2LA, UK",51.6573329,-0.3931491,three-times-a-week-or-more,overnight
+"Dongola Rd, London E1 4QR, UK",51.5190256,-0.0397027,three-times-a-week-or-more,overnight
+"S Audley St, Mayfair, London W1K 2QU, UK",51.5087709,-0.1516187,three-times-a-week-or-more,multiple-days
+"London EC1Y, UK",51.5235153,-0.0902869,just-once,a-whole-day
+"Cable St, Whitechapel, London E1 8JG, UK",51.5106762,-0.0681728,three-times-a-week-or-more,overnight
+"Dorset Square, Marylebone, London NW1 6QJ, UK",51.522536,-0.1611428,three-times-a-week-or-more,multiple-days
+"Euston Rd, London NW1 2BU, UK",51.5249486,-0.1371557,three-times-a-week-or-more,a-whole-day
+"Euston Rd, London NW1 2BU, UK",51.5249486,-0.1371557,three-times-a-week-or-more,a-whole-day
+"Golders Green Rd, London NW11 9ES, UK",51.5778495,-0.2077467,three-times-a-week-or-more,a-whole-day
+"Waterloo Station, Waterloo Rd, South Bank, London SE1 8SW, UK",51.5031653,-0.1123051,just-once,less-than-30-minutes
+"Walm Ln, London NW2 3AY, UK",51.552441,-0.2135483,three-times-a-week-or-more,multiple-days
+"Copenhagen St, London N1 0AW, UK",51.5370003,-0.1222713,three-times-a-week-or-more,overnight
+"Bolton Rd, London E15 4JY, UK",51.5424443,0.0163309,three-times-a-week-or-more,multiple-days
+"Bolton Rd, London E15 4JY, UK",51.5424443,0.0163309,three-times-a-week-or-more,multiple-days
+"London NW1, UK",51.5306872,-0.146932,just-once,about-an-hour
+"Chiswick High Rd, Chiswick, London W4 2DT, UK",51.4924757,-0.2556924,few-times-per-month,less-than-30-minutes
+"South Bank, London SE1 8UF, UK",51.5045255,-0.1108801,three-times-a-week-or-more,multiple-days
+"MacFarlane Rd, Shepherd's Bush, London W12 7JZ, UK",51.5064142,-0.2257127,three-times-a-week-or-more,multiple-days
+"MacFarlane Rd, Shepherd's Bush, London W12 7JZ, UK",51.5064142,-0.2257127,three-times-a-week-or-more,multiple-days
+"Ivydale Rd, London SE15 3DX, UK",51.4621267,-0.046488,few-times-per-month,less-than-30-minutes
+"Tower Bridge, Tower Bridge Rd, London SE1 2UP, UK",51.5054564,-0.0753565,few-times-per-month,about-an-hour
+"Mansion House Pl, London EC4N 8BJ, UK",51.5125922,-0.0890581,three-times-a-week-or-more,a-whole-day
+"Great Sutton St, London EC1V 0DP, UK",51.5233838,-0.1005278,three-times-a-week-or-more,overnight
+"London SE1 5SL, UK",51.4931379,-0.0786307,three-times-a-week-or-more,multiple-days
+"Liverpool Rd, Islington, London N1 1LX, UK",51.5400142,-0.1067924,three-times-a-week-or-more,multiple-days
+"London SW6, UK",51.4754218,-0.2024825,three-times-a-week-or-more,overnight
+"London SW6, UK",51.4754218,-0.2024825,three-times-a-week-or-more,a-whole-day
+"Iveagh Ave, London NW10 7DL, UK",51.5353662,-0.28366,just-once,about-4-hours
+"Oliphant St, London W10 4EB, UK",51.5311629,-0.2120041,three-times-a-week-or-more,multiple-days
+"Gascony Ave, Kilburn, London NW6 4NA, UK",51.542199,-0.1966118,three-times-a-week-or-more,multiple-days
+"Kensington High St, Kensington, London W8 5SE, UK",51.5015484,-0.1910836,just-once,about-4-hours
+"30 Ponton Rd, Nine Elms, London SW11 7AB, UK",51.4811597,-0.1318074,three-times-a-week-or-more,overnight
+"Victoria Park, Grove Rd, London E3 5TB, UK",51.5365614,-0.038972,just-once,about-4-hours
+"Petty France, Westminster, London, UK",51.499465,-0.1360568,three-times-a-week-or-more,a-whole-day
+"London, UK",51.5073509,-0.1277583,few-times-per-month,about-an-hour
+"Inverness Terrace, Bayswater, London W2 3HU, UK",51.5113292,-0.1859072,three-times-a-week-or-more,overnight
+"Hyde Park, London, UK",51.5072682,-0.1657303,three-times-a-week-or-more,overnight
+"Westminster, London, UK",51.4974948,-0.1356583,just-once,a-whole-day
+"Beresford Rd, Mildmay Ward, London N5, UK",51.5500054,-0.0887893,three-times-a-week-or-more,multiple-days
+"Tower Bridge, Tower Bridge Rd, London SE1 2UP, UK",51.5054564,-0.0753565,just-once,overnight
+"London E1 8AB, UK",51.5129802,-0.0737242,just-once,overnight
+"Brookwood Rd, Southfields, London SW18 5BG, UK",51.4440768,-0.200603,three-times-a-week-or-more,overnight
+"Drayton Park, London N5 1NF, UK",51.5552998,-0.1051953,just-once,overnight
+"London W2 5EN, UK",51.520567,-0.1921785,three-times-a-week-or-more,overnight
+"Westminster, London, UK",51.4974948,-0.1356583,just-once,about-4-hours
+"15 Denman St, Piccadilly Circus, West End, London W1D 7HN, UK",51.5108431,-0.1354024,just-once,about-4-hours
+"E14 9yf, 6-7 Harbour Exchange Square, Greater, Cubitt Town, London E14 9HE, UK",51.4980695,-0.0143605,three-times-a-week-or-more,multiple-days
+"Holland Rd, London NW10 5AX, UK",51.5376063,-0.2366552,three-times-a-week-or-more,multiple-days
+"London E14 5AR, UK",51.5063008,-0.0185093,just-once,about-an-hour
+"Neal St, West End, London WC2H 9QQ, UK",51.5141404,-0.1251341,just-once,about-an-hour
+"Oxford St, London, UK",51.5152543,-0.1420395,just-once,less-than-30-minutes
+"33 St James's St, St. James's, London SW1A 1HD, UK",51.5072222,-0.1397222,just-once,about-an-hour
+"33 St James's St, St. James's, London SW1A 1HD, UK",51.5072222,-0.1397222,few-times-per-month,about-4-hours
+"8 Gower St, Bloomsbury, London WC1E 6DP, UK",51.5200696,-0.1298023,few-times-per-month,a-whole-day
+"Bankside, London SE1 9TG, UK",51.5075953,-0.0993564,just-once,about-an-hour
+"Cannon St, London, UK",51.5119949,-0.091962,three-times-a-week-or-more,a-whole-day
+"Mora Rd, Cricklewood, London NW2 6TB, UK",51.5583389,-0.2239199,three-times-a-week-or-more,a-whole-day
+"Mora Rd, Cricklewood, London NW2 6TB, UK",51.5583389,-0.2239199,three-times-a-week-or-more,overnight
+"Whiteley Rd, Gipsy Hill, London SE19 1JU, UK",51.4241991,-0.0883191,three-times-a-week-or-more,overnight
+"Finsbury Park, London, UK",51.5645784,-0.1047257,few-times-per-month,a-whole-day
+"Fellows Rd, London NW3 3JH, UK",51.5437183,-0.1708385,three-times-a-week-or-more,overnight
+"Bullingham Mansions, Kensington Church St, Kensington, London W8 4BE, UK",51.5040465,-0.1934747,three-times-a-week-or-more,overnight
+"Brixton, London, UK",51.4612794,-0.1156148,just-once,about-4-hours
+"Covent Garden, London, UK",51.5116571,-0.1240436,just-once,about-4-hours
+"Covent Garden, London, UK",51.5116571,-0.1240436,just-once,about-4-hours
+"St Stephen's Terrace, Stockwell, London SW8 1DL, UK",51.4784062,-0.121602,three-times-a-week-or-more,multiple-days
+"Courtfield Gardens, Kensington, London SW5 0NF, UK",51.4939189,-0.1868944,three-times-a-week-or-more,multiple-days
+"Waterloo Station, Waterloo Rd, South Bank, London SE1 8SW, UK",51.5031653,-0.1123051,just-once,about-an-hour
+"Dalston Ln, Dalston, London E8 2LX, UK",51.547681,-0.074006,just-once,about-an-hour
+"Blackfriars, London EC4V 4EG, UK",51.511992,-0.1038617,just-once,a-whole-day
+"Blackfriars, London EC4V 4EG, UK",51.511992,-0.1038617,just-once,about-4-hours
+"Bankside, London SE1 9TG, UK",51.5075953,-0.0993564,just-once,about-an-hour
+"Bankside, London SE1 9TG, UK",51.5075953,-0.0993564,just-once,about-4-hours
+"Old Truman Brewery 91, Brick Ln, Spitalfields, London E1 6QL, UK",51.5211024,-0.0724926,just-once,about-an-hour
+"8 Gower St, Bloomsbury, London WC1E 6DP, UK",51.5200696,-0.1298023,just-once,about-an-hour
+"Woodbourne Ave, St Leonard's, London SW16 1UP, UK",51.433347,-0.1301092,three-times-a-week-or-more,overnight
+"Cranhurst Rd, London NW2 4LL, UK",51.5517665,-0.2227609,three-times-a-week-or-more,overnight
+"Cranhurst Rd, London NW2 4LL, UK",51.5517665,-0.2227609,three-times-a-week-or-more,overnight
+"Regent St, London, UK",51.5131276,-0.1405909,three-times-a-week-or-more,multiple-days
+"Teignmouth Rd, London NW2 4DX, UK",51.5504675,-0.2142706,three-times-a-week-or-more,multiple-days
+"London Fenchurch Street, Fenchurch Street station, Fenchurch Pl, Tower, London EC3M 4AJ, UK",51.5115611,-0.0782506,once-twice-a-week,overnight
+"Priory Rd, London NW6 3RE, UK",51.541883,-0.1888735,three-times-a-week-or-more,multiple-days
+"Elgin Ave, London W9 2HA, UK",51.5251926,-0.1967682,three-times-a-week-or-more,multiple-days
+"London SE1 9RT, UK",51.5033118,-0.0896709,just-once,about-4-hours
+"Streatham Hill, London SW2 4TP, UK",51.4411462,-0.1247387,just-once,less-than-30-minutes
+"Streatham Hill, London SW2 4TP, UK",51.4411462,-0.1247387,just-once,about-an-hour
+"Greenwich, London SE10 8QY, UK",51.4765794,0.0018329,just-once,about-an-hour
+"Stockwell, London SW8 1HR, UK",51.4747957,-0.1204854,three-times-a-week-or-more,overnight
+"Courtenay Rd, East Ln, Wembley HA9 7ND, UK",51.5634287,-0.300385,just-once,a-whole-day
+"Oval, London SE11 5TD, UK",51.4831238,-0.1129335,three-times-a-week-or-more,overnight
+"Bowes Rd, Arnos Grove, London N11 1AN, UK",51.61636,-0.1339165,three-times-a-week-or-more,a-whole-day
+"Blenheim Apartments, 112 Cable St, Whitechapel, London E1 8NS, UK",51.5109384,-0.0631359,just-once,less-than-30-minutes
+"7B Belvedere Buildings, London SE1 0DQ, UK",51.5002288,-0.1001337,just-once,about-an-hour
+"Leagrave St, Clapton, London E5 9QX, UK",51.5604325,-0.0478465,three-times-a-week-or-more,multiple-days
+"Leagrave St, Clapton, London E5 9QX, UK",51.5604325,-0.0478465,three-times-a-week-or-more,multiple-days
+"12 Old Church Rd, Chingford Mount, London E4 8DD, UK",51.6177738,-0.0176903,three-times-a-week-or-more,multiple-days
+"Hampstead, London NW3 2QG, UK",51.5531762,-0.1652792,just-once,about-an-hour
+"Abbeville Rd, Clapham Common, London SW4 9LU, UK",51.4569688,-0.1364552,three-times-a-week-or-more,overnight
+"London SE1 9RA, UK",51.5067214,-0.0885712,just-once,about-4-hours
+"Coldharbour, London SW2 1LB, UK",51.4613431,-0.112909,three-times-a-week-or-more,overnight
+"Great Titchfield St, Fitzrovia, London W1W 8BB, UK",51.516552,-0.1395713,three-times-a-week-or-more,about-an-hour
+"Battersea, London SW11 5HS, UK",51.4755622,-0.1485404,three-times-a-week-or-more,overnight
+"N Tenter St, London E1 8DL, UK",51.5130969,-0.07162,three-times-a-week-or-more,multiple-days
+"Harrow, UK",51.580559,-0.341995,just-once,about-an-hour
+"Tower Bridge, Tower Bridge Rd, London SE1 2UP, UK",51.5054564,-0.0753565,just-once,about-4-hours
+"Old Compton St, West End, London W1D 4HS, UK",51.5135117,-0.1307417,three-times-a-week-or-more,a-whole-day
+"753 High Rd, North Finchley, London N12 8LG, UK",51.614518,-0.176932,just-once,less-than-30-minutes
+"London NW4, UK",51.5936993,-0.2181107,few-times-per-month,multiple-days
+"396 Mentmore Terrace, Hackney, London E8 3PH, UK",51.5412453,-0.0575503,three-times-a-week-or-more,multiple-days
+"Morden Station, London Rd, Morden SM4 5AZ, UK",51.402248,-0.1947068,three-times-a-week-or-more,a-whole-day
+"Snaresbrook, London E17, UK",51.5856786,0.0084531,once-twice-a-week,about-4-hours
+"Bellenden Rd, London SE15 4BY, UK",51.4645732,-0.0763513,three-times-a-week-or-more,multiple-days
+"Woodgate House, 1 Manorcrofts Road, Englefield Green, Egham TW20 9LU, UK",51.444424,-0.5660613,just-once,a-whole-day
+"Wembley Park, Wembley HA9 0QZ, UK",51.5579582,-0.2858286,three-times-a-week-or-more,multiple-days
+"London SE1, UK",51.5018327,-0.090951,just-once,about-an-hour
+"Eastwood St, London SW16 6PT, UK",51.4196326,-0.144425,three-times-a-week-or-more,overnight
+"Surrey St, London WC2R 2ND, UK",51.5120764,-0.1155025,three-times-a-week-or-more,multiple-days
+"Harley Rd, London NW10 8AY, UK",51.5349403,-0.25433,three-times-a-week-or-more,a-whole-day
+"Oakdale Rd, Streatham Wells, London SW16 2HP, UK",51.4265469,-0.1226586,three-times-a-week-or-more,overnight
+"Hampstead, London NW3 1QB, UK",51.5559947,-0.1767625,just-once,about-an-hour
+"Charlotte Rd, Shoreditch, London EC2A 3PB, UK",51.5253714,-0.0813752,three-times-a-week-or-more,a-whole-day
+"London, UK",51.5073509,-0.1277583,once-twice-a-week,a-whole-day
+"SoHo, New York, NY, USA",40.723301,-74.0029883,once-twice-a-week,a-whole-day
+"Valley Rd, Kenley CR8 5BZ, UK",51.3152039,-0.0892514,few-times-per-month,a-whole-day
+"Cologne Rd, Battersea, London SW11 2AH, UK",51.4619212,-0.1765809,three-times-a-week-or-more,multiple-days
+"Westbourne Terrace, Paddington, London W2 6QT, UK",51.5165944,-0.1802386,just-once,multiple-days
+"Willesden Ln, Kilburn, London NW6 7TA, UK",51.5410393,-0.20213,three-times-a-week-or-more,multiple-days
+"New Cross Rd, New Cross, London SE14 6TA, UK",51.4758385,-0.0303002,three-times-a-week-or-more,multiple-days
+"Regent's Park Rd, Camden Town, London NW1 8XL, UK",51.5406147,-0.157382,three-times-a-week-or-more,overnight
+"St Stephen's Ave, Shepherd's Bush, London W12 8JB, UK",51.5033645,-0.2314864,few-times-per-month,multiple-days
+"Courtfield Gardens, Kensington, London SW5 0NF, UK",51.4939189,-0.1868944,three-times-a-week-or-more,overnight
+"Paragon Pl, Blackheath, London SE3 0SP, UK",51.4682086,0.0107967,three-times-a-week-or-more,overnight
+"St Katharine's & Wapping, London EC3N 4AB, UK",51.5081124,-0.0759493,just-once,about-4-hours
+"London, UK",51.5073509,-0.1277583,few-times-per-month,about-4-hours
+"Spitalfields, London, UK",51.5189263,-0.0748478,just-once,about-4-hours
+"Odessa Rd, London NW10 5YH, UK",51.5339899,-0.2373617,three-times-a-week-or-more,multiple-days
+"Beethoven St, London W10 4LQ, UK",51.5309746,-0.2070488,three-times-a-week-or-more,multiple-days
+"Oval, London SW8 2NA, UK",51.4812732,-0.1273959,three-times-a-week-or-more,multiple-days
+"Highcroft Rd, London N19 3AQ, UK",51.5715572,-0.1223768,three-times-a-week-or-more,overnight
+"223 Regent St, Mayfair, London W1B 2QD, UK",51.5136899,-0.1414866,just-once,a-whole-day
+"Church Dr, London NW9 8DP, UK",51.5710857,-0.260568,three-times-a-week-or-more,overnight
+"Eardley Cres, Earl's Court, London SW5 9JZ, UK",51.4888142,-0.1956845,once-twice-a-week,multiple-days
+"Abingdon Cl, London SW19 1AD, UK",51.4198229,-0.1842904,three-times-a-week-or-more,multiple-days
+"Isleworth TW7 5FW, UK",51.4758611,-0.3338032,three-times-a-week-or-more,about-4-hours
+"London, UK",51.5073509,-0.1277583,just-once,about-4-hours
+"Bayswater, London, UK",51.5135456,-0.1865659,just-once,about-4-hours
+"Collingham Rd, Kensington, London SW5 0LT, UK",51.4942043,-0.1881374,three-times-a-week-or-more,overnight
+"West End Ln, London NW6 2NE, UK",51.5435207,-0.1923843,three-times-a-week-or-more,multiple-days
+"London SE1 2AA, UK",51.5049623,-0.078297,just-once,about-4-hours
+"Borough High St, London SE1 1HR, UK",51.5028996,-0.0917804,few-times-per-month,about-an-hour
+"Clapham High St, Clapham Town, London SW4 7SS, UK",51.4620159,-0.1362506,few-times-per-month,about-an-hour
+"The Broadway, Edmonton, London N9 0TP, UK",51.6239885,-0.0609422,few-times-per-month,about-an-hour
+"Aldersgate St, Barbican, London EC1A 4HU, UK",51.5180887,-0.0970648,three-times-a-week-or-more,overnight
+"223 Regent St, Mayfair, London W1B 2QD, UK",51.5136899,-0.1414866,just-once,about-4-hours
+"Finsbury Circus Gardens, Finsbury Circus, London EC2M 7DT, UK",51.5178582,-0.0864333,just-once,about-an-hour
+"8 Loveridge Mews, West Hampstead, London NW6 2DP, UK",51.5461621,-0.2021467,three-times-a-week-or-more,overnight
+"Hampstead High St, London NW3 1QH, UK",51.5561982,-0.1780995,three-times-a-week-or-more,a-whole-day
+"Brick Ln, Spitalfields, London E1 6QL, UK",51.5204065,-0.0720978,just-once,about-an-hour
+"Inverness Terrace, Bayswater, London W2 3HU, UK",51.5113292,-0.1859072,once-twice-a-week,overnight
+"Inverness Terrace, Bayswater, London W2 3LD, UK",51.5136279,-0.1864745,three-times-a-week-or-more,overnight
+"Watford Rd, Harrow HA1 3UA, UK",51.5653456,-0.3214726,three-times-a-week-or-more,about-4-hours
+"Durnsford Rd, London SW19 8EF, UK",51.4381761,-0.1968899,three-times-a-week-or-more,overnight
+"Frognal, London NW3 6YA, UK",51.5545472,-0.1828789,three-times-a-week-or-more,multiple-days
+"Cleveland Square, Bayswater, London W2 6DH, UK",51.5150318,-0.1816083,three-times-a-week-or-more,overnight
+"London SE5 0YB, UK",51.4806446,-0.0980352,three-times-a-week-or-more,overnight
+"Hastings, UK",50.854259,0.573453,just-once,about-an-hour
+"London N2 0BT, UK",51.5814604,-0.1591793,three-times-a-week-or-more,overnight
+"Stockwell, London SW8 1EP, UK",51.4789001,-0.1203196,three-times-a-week-or-more,overnight
+"Vale of Health, Hampstead, London NW3, UK",51.5621945,-0.1764207,just-once,about-an-hour
+"Bermondsey, London SE1 2RN, UK",51.4999569,-0.0725036,three-times-a-week-or-more,overnight
+"Hanbury St, London E1 5JD, UK",51.5198342,-0.0675986,three-times-a-week-or-more,multiple-days
+"Hampstead Heath, Hampstead, London NW3 2QD, UK",51.5552509,-0.1658907,just-once,about-4-hours
+"54 Rye Ln, Peckham, London SE15 5BY, UK",51.4710808,-0.0696636,just-once,less-than-30-minutes
+"White City, London W12 7PG, UK",51.5105854,-0.2344926,three-times-a-week-or-more,overnight
+"Sloane Ave, Chelsea, London SW3 3DH, UK",51.4919806,-0.1653766,just-once,about-an-hour
+"Golden Square, West End, London, UK",51.5115104,-0.1375283,just-once,about-an-hour
+"Southside Shopping Centre, Wandsworth, London SW18 4TG, UK",51.4553279,-0.1945318,just-once,less-than-30-minutes
+"Mackeson Rd, London NW3 2LT, UK",51.5549095,-0.1598566,once-twice-a-week,multiple-days
+"Ilford IG1 1RS, UK",51.5591636,0.0725815,few-times-per-month,about-an-hour
+"Fulham Palace Rd, Hammersmith, London W6 8RF, UK",51.4868802,-0.2195199,just-once,about-an-hour
+"Fenchurch Street Railway Station, London EC3M 4PB, UK",51.5117156,-0.0790676,three-times-a-week-or-more,overnight
+"Highams Park railway station, Highams Park, London E4, UK",51.60835,-0.0002,once-twice-a-week,a-whole-day
+"Angel Station, Islington High St, Islington, London N1 8XX, UK",51.5324208,-0.1061166,few-times-per-month,a-whole-day
+"Veda Rd, London SE13 7JF, UK",51.4588511,-0.0230527,three-times-a-week-or-more,overnight
+"Bankside, London SE1 9TG, UK",51.5075953,-0.0993564,just-once,about-4-hours
+"Putney, London SW15 6BB, UK",51.4598022,-0.216883,three-times-a-week-or-more,overnight
+"Westminster, London SW1P 4AY, UK",51.4913666,-0.1313898,three-times-a-week-or-more,multiple-days
+"Portnall Rd, London W9 3BN, UK",51.5301921,-0.2035247,three-times-a-week-or-more,multiple-days
+"Leighton Gardens, London NW10 3PU, UK",51.5369707,-0.2255913,three-times-a-week-or-more,multiple-days
+"Curzon St, Mayfair, London W1J 8PE, UK",51.5079789,-0.1447448,three-times-a-week-or-more,a-whole-day
+"Brecknock Rd, London N7 0BL, UK",51.549194,-0.1298223,once-twice-a-week,overnight
+"Chambers Ln, London NW10 2RN, UK",51.5445255,-0.2278645,three-times-a-week-or-more,multiple-days
+"Colebrooke Row, The Angel, London N1 8AP, UK",51.5332808,-0.102723,three-times-a-week-or-more,multiple-days
+"Carpenter's Pl, Clapham Town, London SW4 7TD, UK",51.462552,-0.1339142,three-times-a-week-or-more,multiple-days
+"Frewin Rd, London SW18 3LP, UK",51.4448566,-0.1746381,just-once,about-4-hours
+"Gloucester Terrace, London W2 6HN, UK",51.5174115,-0.1830037,once-twice-a-week,multiple-days
+"Shoreditch, London EC2A 3EZ, UK",51.5244269,-0.079178,just-once,overnight
+"Southampton Way, London SE5 7SW, UK",51.4803238,-0.0884968,three-times-a-week-or-more,overnight
+"Tadema Rd, Chelsea, London SW10 0PZ, UK",51.4788216,-0.1814647,three-times-a-week-or-more,multiple-days
+"Aldgate East tube station, London E1 7PU, UK",51.5152843,-0.0722437,just-once,about-an-hour
+"Churchill Rd, Kentish Town, London NW5 1AN, UK",51.55781,-0.1409992,three-times-a-week-or-more,multiple-days
+"Primrose Gardens, London NW3 4TJ, UK",51.5461958,-0.1620159,three-times-a-week-or-more,multiple-days
+"London SW1Y, UK",51.5077055,-0.1328448,just-once,about-an-hour
+"Rattray Rd, Coldharbour, London SW2 1AY, UK",51.45921,-0.1123504,three-times-a-week-or-more,overnight
+"Kenchester Cl, Oval, London SW8 2TZ, UK",51.4780742,-0.1250873,three-times-a-week-or-more,overnight
+"Bonner Rd, Bethnal Green, London E2 9JU, UK",51.531508,-0.049082,three-times-a-week-or-more,overnight
+"Sellons Ave, London NW10 4HH, UK",51.539154,-0.2432129,three-times-a-week-or-more,a-whole-day
+"Tachbrook St, Lillington and Longmoore Gardens, London SW1V 2NA, UK",51.4915233,-0.1380016,three-times-a-week-or-more,a-whole-day
+"Mortimer St, Fitzrovia, London W1T 3JW, UK",51.518334,-0.1390994,just-once,about-4-hours
+"Blackheath Rise, Blackheath, London SE13 7PN, UK",51.4691114,-0.0105226,three-times-a-week-or-more,overnight
+"London, UK",51.5073509,-0.1277583,few-times-per-month,about-4-hours
+"St John St, Clerkenwell, London EC1V 4PE, UK",51.5264203,-0.1038462,few-times-per-month,a-whole-day
+"Valley Retail Park, Purley Way, Croydon CR0 4UZ, UK",51.3799219,-0.1237567,just-once,about-4-hours
+"Bunhill Row, London EC1Y 8LP, UK",51.5226949,-0.0889985,three-times-a-week-or-more,overnight
+"Shoreditch, London, UK",51.5229106,-0.0777472,once-twice-a-week,about-an-hour
+"Cygnet St, Shoreditch, London E1, UK",51.52376,-0.0727073,once-twice-a-week,about-an-hour
+"London SW15 1EN, UK",51.4666176,-0.2148224,few-times-per-month,about-4-hours
+"Battersea, London SW11 5HS, UK",51.4755622,-0.1485404,three-times-a-week-or-more,overnight
+"Green Park, London SW1A 1AA, UK",51.5039038,-0.1438567,once-twice-a-week,a-whole-day
+"Garratt Ln, London SW17 0PF, UK",51.4331937,-0.1835532,just-once,less-than-30-minutes
+"Walthamstow, London E17 3DL, UK",51.5878982,-0.0124055,three-times-a-week-or-more,multiple-days
+"Crowndale Court, Crowndale Rd, Kings Cross, London NW1 1TY, UK",51.535242,-0.1336886,three-times-a-week-or-more,multiple-days
+"Archway Rd, Highgate, London N6 5AU, UK",51.5758909,-0.1429328,three-times-a-week-or-more,multiple-days
+"Sutherland Square, Walworth, London SE17 3EQ, UK",51.4854895,-0.0963094,once-twice-a-week,about-4-hours

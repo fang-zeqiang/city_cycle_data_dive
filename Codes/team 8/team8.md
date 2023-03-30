@@ -1,0 +1,2 @@
+**How is micro-mobility usage changing over time and in different UK towns?**
+How are e-scooter journey patterns evolving over time, and can we derive how many journeys are being used for regular transport vs recreational use? How do different pricing models impact usage? How much of a difference does new cycle infrastructure impact on e-scooter use, e.g. new/temporary cycle lanes introduced during the Covid pandemic? How should e-scooters be distributed among parking bays to maximise utility or revenue, and where and how many should such parking bays be? 

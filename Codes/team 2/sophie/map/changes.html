@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TFLTubeMap</title>
+<meta charset='utf-8' />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="icon" type="image/png" href="https://img.icons8.com/bubbles/50/000000/car.png">
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+
+<script charset="utf-8" src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+    
+    <div id="map"></div>
+   
+
+    <!-- CONSOLEEE -->
+    <div id="console">
+        <h2 style="font-size: 35px;">Changes in passenger flow comparison</h2>
+         <p class="credit">Data: <a href="https://www.whatdotheyknow.com/request/station_usage_figures?
+unfold=1#incoming-1697263">FOI Request</a>.</p>
+
+        <button type="button" class="collapsible">  More Information</button>
+        <div class="extra_content">
+          <p>This dataset is the tap data provided in a data request thread. Unlike the NUMBAT set, this dataset did not contain in-depth number of passengers during different periods of the day, only a daily count is included. The day of week is stacked together so that comparison with the 2019 data is made possible.</p>
+        </div>
+
+         
+         <div class="session">
+           <h2>Numer of Passengers</h2>
+           <div class="row colors_change"></div>
+            <div class="row labels">
+             <div class="label_c">0</div>
+             <div class="label_c">-20</div>
+             <div class="label_c">-50</div>
+             <div class="label_c">-75</div>
+             <div class="label_c">-100</div>
+             
+            </div>
+         </div>
+
+         <div class='session'>
+           <h2>Period of the Day</h2>
+           <p style="margin: 0;"><i>2020 dataset did not contain time information</i></p>
+         </div>
+
+
+         <div class='session'>
+           <h2>Day of the week</h2>
+           <div class='filter' id='week_filters'>
+             <input id='MTT' type='radio' name='dow' value='MTT' checked="checked">
+             <label for='MTT'>Mon-Thurs</label>
+             <input id='FRI' type='radio' name='dow' value='FRI'>
+             <label for='FRI'>Fri</label>
+         	 </br>
+             <input id='SAT' type='radio' name='dow' value='SAT'>
+             <label for='SAT'>Sat</label>
+             <input id='SUN' type='radio' name='dow' value='SUN'>
+             <label for='SUN'>Sun</label>
+           </div>
+         </div>
+
+        <div class="session">
+        	<h2>Year</h2>
+        	<button onclick="location.href='index.html'" type="button" class="year_button">2019</button>
+          <button onclick="location.href='2020map.html'" type="button" class="year_button">2020</button>
+
+		</div>
+
+
+
+    </div>   
+
+
+
+<script>
+
+  var slider_hour = 0;
+  const start_btn = document.getElementById("go_button");
+  const slider = document.getElementById("slider")
+  var counter = 0;
+  var target = [-73.958, 40.6888];
+
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoiaGlzdG9pcmV4c3IiLCJhIjoiY2tqdmltNmg2MDk5OTJ2cXVub2RwMHExZyJ9.9ZVPyPVZPg28WyGD_cl5QA';
+
+        // Load a new map in the 'map' HTML div
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/histoirexsr/ckmdxne2r5c8d17qlbt30u2ef?optimize=true', // Using the standard Mapbox Light style
+            center: [-0.118, 51.509], // starting position [lng, lat]
+            zoom: 10, // starting zoom
+            bearing: 0,
+
+        });
+
+
+  //import data from api
+  
+  map.on('load', function() {  
+            map.addControl(new mapboxgl.NavigationControl());
+
+            /*
+            map.rotateTo((8900 / 110), { duration: 8000 });
+            map.flyTo({
+              center: target,
+              zoom: 10,
+              bearing: 315,
+              pitch: 0,
+              speed: 0.2,
+              curve: 1,
+              easing: function(t){
+                return t;
+              },
+            });
+
+            
+   			
+   			*/
+
+   			//filter day of week
+   			var filterdoW = ['==', ['string',['get', 'Day']], 'MTT'];           
+   			// layer for taxi pickup freq
+            map.addLayer({
+                id: 'changes_2020',
+                type: 'circle',
+                source: {
+                  type: "geojson",
+                  data: 'changes.geojson'
+                }, // name of tileset layer
+                'layout': {
+                    'visibility': 'visible'
+                },
+                'paint': {
+                  'circle-radius': [
+                  
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                      "interpolate",
+                      ["linear"],
+                      ["get", "abs_change"],
+                      1,
+                      5,
+                      50,
+                      4,
+                      80,
+                      5
+                    ],
+                    15,
+                    [
+                      "interpolate",
+                      ["linear"],
+                      ["get", "abs_change"],
+                      1,
+                      5,
+                      50,
+                      15,
+                      78,
+                      20
+                    ],
+                    18.79,
+                    [
+                      "interpolate",
+                      ["linear"],
+                      ["get", "abs_change"],
+                      1,
+                      5,
+                      50,
+                      25,
+                      80,
+                      30
+                    ]
+                  ],
+                  'circle-color': [
+                          "step",
+                            ["get", "abs_change"],
+                            "hsl(54, 100%, 74%)",
+                            10,
+                            "#3ffbe3",
+                            20,
+                            "#519bd9",
+                            40,
+                            "#6719bc",
+                            60,
+                            "#a530c4",
+                            80,
+                            "#fc464d"
+                        ],
+                  'circle-opacity': 0.9
+                  },
+                  filter : ['all', filterdoW],
+          });
+
+            
+            // marker layer for popup
+            map.loadImage(
+            'icon.png',
+            // Add an image to use as a custom marker
+            function (error, image) {
+            if (error) throw error;
+            map.addImage('custom-marker', image);
+
+            map.addLayer({
+                id: 'StationName_2020', //its for me to see
+                type: 'symbol',
+                source: {
+                  type: "geojson",
+                  data: 'changes.geojson'
+                }, // name of tileset layer
+                'layout': {
+                'visibility':'visible',
+                'icon-image': 'custom-marker',
+                'icon-allow-overlap': true,
+
+                },
+                'paint':{
+                  'icon-opacity': 0.0,
+                },
+            });
+
+          
+        
+          
+
+          document.getElementById('week_filters').addEventListener('change', function(e) {
+            var dayofWeek = e.target.value;
+            // update the map filter
+            if (dayofWeek === 'MTT') {
+              filterdoW = ['==', ['string',['get', 'Day']], 'MTT'];
+            } else if (dayofWeek === 'FRI') {
+              filterdoW = ['==', ['string',['get', 'Day']], 'FRI'];
+            } else if (dayofWeek === 'SAT') {
+              filterdoW = ['==', ['string',['get', 'Day']], 'SAT'];
+            } else if (dayofWeek === 'SUN') {
+              filterdoW = ['==', ['string',['get', 'Day']], 'SUN'];
+            } else{
+            	console.log('error');
+            }
+            map.setFilter('changes_2020', ['all', filterdoW]);
+          });
+
+          
+
+          // Create a popup, but don't add it to the map yet.
+          var popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+          });
+           
+          map.on('mouseenter', 'changes_2020', function (e) {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = 'pointer';
+           
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = 'Day of week: ' + e.features[0].properties.Day + '</br> Station Name: ' + e.features[0].properties.Station + " (" + e.features[0].properties.Mode +") </br> Change %: " + (Math.round(e.features[0].properties.change * 100) / 100);
+           
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+           
+          // Populate the popup and set its coordinates
+          // based on the feature found.
+          popup.setLngLat(coordinates).setHTML(description).addTo(map);
+          });
+           
+          map.on('mouseleave', 'changes_2020', function () {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+          });
+
+          
+
+
+    });
+   
+
+//scipt for extra info box
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+});
+
+</script>
+
+</body>
+</html>

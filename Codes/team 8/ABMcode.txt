@@ -1,0 +1,208 @@
+directed-link-breed
+[active-links active-link]  ; links of route
+directed-link-breed
+[inactive-links inactive-link]  ; links of no route
+
+
+turtles-own
+[
+  val new-val
+] ; a node's past and current number of e-scooters, represented as size
+
+
+links-own
+[
+  current-flow
+]  ; the amount of quantity that has passed through a link
+
+
+globals
+[
+  total-val                 ; total number of e-scooters in the model
+  max-val                   ; maximum number of e-scooters held by a single node in the model
+  max-flow                  ; maximum number of e-scooters that has passed through a link
+                            ; in the model
+  mean-flow                 ; average number of e-scooters that is passing through an arbitrary
+                            ; link in the model
+  total-flow
+  number-of-parking
+  income
+  memory
+  final-flow
+]
+
+
+;;;
+;;; Setup Procedures
+;;;
+
+
+to setup
+
+  clear-all
+
+  set-default-shape turtles "circle"
+  set-default-shape links "small-arrow-link"
+  set memory [ ]
+
+  ask patches with
+  [
+    abs pxcor < (grid-size / 2) and abs pycor < (grid-size / 2)
+  ]
+  [
+    sprout 1 [ set color blue ]
+  ]  ; create the grid of nodes
+
+  ask turtles
+  [
+    set val 5
+    let neighbor-nodes turtle-set [turtles-here] of neighbors4
+    create-active-links-to neighbor-nodes
+    [
+      set current-flow 0
+      if random-float 100 > link-chance
+      [
+        set breed inactive-links
+        hide-link
+      ]
+    ]
+  ]  ; create the link based on link chance
+     ; link chance depends on the city accessibility and traffic convenience
+
+  ask turtles
+  [
+    setxy (xcor * (max-pxcor - 1) / (grid-size / 2 - 0.5))
+          (ycor * (max-pycor - 1) / (grid-size / 2 - 0.5))
+  ] ; spread the nodes out
+
+
+  update-globals  ;
+  update-visuals  ;
+
+  reset-ticks
+
+end
+
+
+;;;
+;;; Main Procedure
+;;;
+
+
+to go
+
+  ask turtles
+  [
+    set new-val 0
+  ]
+
+  ask turtles
+  [
+    let recipients out-active-link-neighbors
+
+   ifelse any? recipients
+    [
+      let val-to-keep val * (1 - diffusion-rate / 100)
+      ; number of e-scooters left at the orgianl node
+      set new-val new-val + val-to-keep
+      ; number of e-scooters now
+      let val-increment1  ((val - val-to-keep) / count recipients)
+      ask recipients
+       [
+        set new-val new-val + val-increment1
+        ask in-active-link-from myself [ set current-flow val-increment1 ]
+      ]
+    ] [
+      set new-val new-val + val
+    ]
+  ]
+  ask turtles [ set val new-val ]
+
+
+  update-globals
+  update-visuals
+
+  tick
+
+end
+
+to change-number
+
+  ask n-of 1 turtles
+  [
+    set val 29
+  ]  ; create significant nodes according to data
+
+  ask n-of 8  other turtles
+  [
+    set val 2
+  ]  ; create significant nodes according to data
+
+  update-globals  ;
+  update-visuals  ;
+
+end
+
+;to change-number
+
+ ; ask n-of 4 turtles
+ ; [
+   ; set val 11
+ ; ]  ; create significant nodes according to data
+
+; ask n-of 8  other turtles
+ ; [
+ ;   set val 2
+ ; ]  ; create significant nodes according to data
+
+ ; update-globals  ;
+ ; update-visuals  ;
+
+;end
+
+
+;;;
+;;;     Updates
+;;;
+
+
+to update-globals
+
+  set total-val sum [ val ] of turtles  ; total number of e-scooters
+  set number-of-parking count turtles  ; numebr of the parking bays
+  set max-val max [ val ] of turtles  ; the max number of e-scooters in the model
+  set total-flow sum [current-flow] of active-links  ; the number of e-scooters that move within a fixed time
+   set memory lput total-flow memory
+   if length memory >= 25
+  [
+    set memory but-first memory
+  ]
+  set final-flow sum memory
+  set income pricing-per-hour * final-flow
+  if any? active-links
+  [
+    set max-flow max [current-flow] of active-links  ; the max number of e-scooters that move within a fixed time
+    set mean-flow mean [current-flow] of active-links  ; the average number of e-scooters that move within a fixed time
+  ]
+
+end
+
+to update-visuals
+
+  ask turtles [ update-node-appearance ]  ; update the size of nodes
+  ask active-links [ update-link-appearance ]  ; update the color of links
+
+end
+
+to update-node-appearance
+
+  set size 0.1 + 5 * sqrt (val / total-val)
+
+end
+
+to update-link-appearance
+
+
+  set color scale-color gray (current-flow / (2 * mean-flow + 0.00001)) -0.4 1
+
+end

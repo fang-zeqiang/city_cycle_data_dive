@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>London Road Space</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+      
+      
+      .map-overlay {
+          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          position: absolute;
+          width: 220px;
+          min-width: 220px;
+          top: 0;
+          left: 0;
+          padding: 10px;
+      }
+      
+      .map-overlay .map-overlay-inner {
+          background-color: #fff;
+          box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+          border-radius: 3px;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+      
+      .map-overlay table {
+          border: none;
+          width: 100%;
+      }
+      
+      .map-overlay h2 {
+          line-height: 24px;
+          display: block;
+          margin: 0 0 10px;
+      }
+
+      .map-overlay h3 {
+          font-size: 14px;
+          line-height: 20px;
+          display: block;
+          margin: 0 0 10px;
+      }
+      
+      .map-overlay label {
+          font: 16px/18px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          vertical-align: middle;
+          margin: 0;
+          padding: 0;
+      }
+      
+      .map-overlay .legend .bar {
+          height: 10px;
+          width: 100%;
+          background: linear-gradient(to right, #FCA107, #7F3121);
+      }
+      
+      .map-overlay input {
+          display: inline;
+          vertical-align: middle;
+          margin: 5px;
+          padding: 0;
+      }
+
+      .legend {
+background-color: #fff;
+border-radius: 3px;
+bottom: 30px;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+padding: 10px;
+position: absolute;
+right: 10px;
+z-index: 1;
+}
+ 
+.legend h4 {
+margin: 0 0 10px;
+}
+ 
+.legend div span {
+border-radius: 50%;
+display: inline-block;
+height: 10px;
+margin-right: 5px;
+width: 10px;
+      
+      .map-overlay p.credit {
+          margin: 5px 0 0 0;
+          padding: 0;
+      }
+      
+
+      #myDiv {
+          border: 2px  rgb(255, 255, 255);
+          background-color: rgba(255, 255, 255, 0);
+          text-align: center;
+      }
+
+      #myDiv2 {
+          border: 2px  rgb(255, 255, 255);
+          background-color: rgba(255, 255, 255, 0);
+          text-align: center;
+      }
+
+      #myDiv3 {
+          border: 2px  rgb(255, 255, 255);
+          background-color: rgba(255, 255, 255, 0);
+          text-align: center;
+      }
+          </style>
+
+
+
+
+
+</head>
+<body>
+
+<div id='map'></div>
+
+<div id="state-legend" class="legend">
+    <h4>Legend</h4>
+    <div><span style="background-color: #f1bd2e"></span>Carriageway > 1.40m</div>
+    <div><span style="background-color: #6e4532"></span>Carriageway > 3.85m</div>
+    <div><span style="background-color: #727b97"></span>Carriageway > 7.70m</div>
+
+    </div>
+
+
+
+<div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+        <h2>London Street Space</h2>
+        <h3>Local Authorities (2000-2019)</h3>
+    
+
+        <tr><td>
+          <div id="myDiv3">
+          <p class="cityfly">Highest Growth Rate: 
+            <a href="#" class="citylink" id="tower">Tower Hamlets</a> &nbsp;
+            <a href="#" class="citylink" id="blab">Blaby</a> &nbsp;
+            <a href="#" class="citylink" id="lond">City of London</a> &nbsp;
+          </p>
+          <p class="cityfly">Highest Negative Growth Rate:
+            <a href="#" class="citylink" id="spel">Spelthorne</a> &nbsp;
+            <a href="#" class="citylink" id="gosp">Gosport</a> &nbsp;
+            <a href="#" class="citylink" id="inve">Inverclyde</a>
+          </p>
+        </td></tr>
+        </div>
+    
+        
+	
+		<td>
+      <div id="myDiv2">
+
+          <p class="credit">Street Space Data: <a ></p><p class="credit">Intellectual Property (IP) owner Dr Nicolas Palominos at n.palominos.16@ucl.ac.uk.</a></p>
+          <p class="credit">London Data Dive 2021 - Group 1</p>
+      </div>
+      </div>
+
+
+
+<script>
+
+    document.getElementById("myDiv3").setAttribute("hidden","");
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoieWltaW41IiwiYSI6ImNrazd6aHBydjBpeG0ycG54OXFmMjVkN3kifQ.0MTt-KZg4VD0mWzbJoyTjA'; // Put your Mapbox Public Access token here
+
+    // Load a new map in the 'map' HTML div
+    var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/yimin5/ckmd7wq3f130n17p05w48rstq', // stylesheet location
+    center: [-0.1, 51.51], // starting position [lng, lat]
+    zoom: 12.5 // starting zoom
+    });
+
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+
+
+
+    map.on('load', function() {    // This is our first example of asynchronous JS. We can only add additional layers after the map has loaded
+
+          // Add the circle layer to the map
+
+
+    // Assign an event listner to the slider so that the setYear function runs when the user changes the slider
+
+
+
+            var mypopup = new mapboxgl.Popup({closeButton: false});
+
+            //popup 
+            
+            map.on('mouseover', 'Growth', function(e) {
+
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = "<h2>" + e.features[0].properties.lad17nm + "</h2></p><p>2000: " + e.features[0].properties.original + 
+              "<p>2019: " + e.features[0].properties.current + "<h3><p>Percent changed: " + e.features[0].properties.status_m + " " +
+              e.features[0].properties.growth_per + "%</p></h3>";
+
+            mypopup
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+
+            });
+
+            // Change the cursor to a pointer when the mouse is over the stations layer.
+            map.on('mouseenter', 'Growth', function () {
+                  map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves and remove the popup window.
+            map.on('mouseleave', 'Growth', function () {
+                map.getCanvas().style.cursor = '';
+                mypopup.remove();
+            });
+        
+
+
+
+
+      //Event listener for layer switch
+      document.getElementById("layer1").addEventListener("click", function(){
+      map.setPaintProperty('van','line-opacity',0.45);
+      map.setPaintProperty('Growth','circle-opacity',0);
+      map.setPaintProperty('van','circle-stroke-opacity',0.95);
+      map.setPaintProperty('Growth','circle-stroke-opacity',0);
+      map.setPaintProperty('labels','text-color','rgba(255,255,255,0.95)');
+
+      document.getElementById("myDiv").removeAttribute("hidden");
+      document.getElementById("myDiv2").removeAttribute("hidden");
+      document.getElementById("myDiv3").setAttribute("hidden","");
+
+      });
+
+
+
+      document.getElementById("layer2").addEventListener("click", function(){
+      map.setPaintProperty('van','line-opacity',0);
+      map.setPaintProperty('Growth','circle-opacity',0.45);
+      map.setPaintProperty('van','circle-stroke-opacity',0);
+      map.setPaintProperty('Growth','circle-stroke-opacity',0.95);
+      map.setPaintProperty('labels','text-color','rgba(255,255,255,0)');
+
+      document.getElementById("myDiv").setAttribute("hidden","");
+      document.getElementById("myDiv2").setAttribute("hidden","");
+      document.getElementById("myDiv3").removeAttribute("hidden");
+      });
+
+
+      //Event listener for the zoom to buttons created using a for loop and switch case statement to set lat and long
+var x = document.getElementsByClassName('citylink');
+
+var i;
+		for (i= 0; i < x.length; i++) {
+			x[i].addEventListener('click', function(e) {
+
+				var lat,long;
+
+				switch(e.target.id) {
+					case "tower": long=-0.0364; lat=51.5155; break;
+					case "blab": long=-1.1989; lat=52.5771; break;
+					case "lond": long=-0.0935; lat=51.5156; break;
+					case "spel": long=-0.4625; lat=51.4155; break;
+					case "gosp": long=-1.1673; lat=50.8064; break;
+          case "inve": long=-4.7539; lat=55.9003; break;
+				}
+
+				map.flyTo({
+					center: [long,lat],
+					zoom: 11,
+					speed: 0.3,
+					
+					});
+			});
+		}
+
+
+        
+    });
+
+</script>
+
+</body>
+</html>

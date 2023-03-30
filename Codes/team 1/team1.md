@@ -1,0 +1,4 @@
+
+**What is the potential for micro-mobility and e-bikes to transform urban mobility in UK cities?**
+
+Can we use transportation data from the UK and beyond and in combination with other relevant datasets (e.g. air quality, weather etc.) to predict the number and types of trips (passenger journeys and goods deliveries) that can / will be taken using new modes such as e-scooters, e-bikes and e-cargo bikes? This could include effects on accessibility, traffic and air quality and should also consider whether trips currently made by walking, cycling or public transport would be replaced by these new modes and any anticipated seasonal variation in their use. You may also consider how these new modes might connect to existing transport hubs to enable greater use of public transport services or support urban freight consolidation centres.
